@@ -26,6 +26,8 @@ services:
       - 'OLLAMA_BASE_URL=http://host.docker.internal:11434'
       # - 'OLLAMA_BASE_URL=http://localhost:8000'
       - 'WEBUI_SECRET_KEY='
+      - 'WEBUI_NAME=${WEBUI_NAME-Open WebUI}'
+      - 'ENABLE_SIGNUP=${ENABLE_SIGNUP-false}'
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: unless-stopped
